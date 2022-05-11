@@ -188,3 +188,17 @@ label input[type="checkbox"] {
 /*
 #FFE53B,  #FF2525
 */
+
+
+.button:disabled {
+  opacity: 0.5;
+}
+.hide {
+  display: none;
+}
+
+.error {
+  display: block;
+  color: red;
+  margin: 5px 0 0 0;
+}
