@@ -1,106 +1,82 @@
-<><html>
-    <head>
-        <style>
-            body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
-            .w3-bar-block .w3-bar-item {padding:20px}
-            </style>
-          <!--End of Menu Syle-->
-    </head>
-    <body>
-        <div id="menu-box">
-            <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
-  
-              <!-- First Photo Grid-->
-              <div class="w3-row-padding w3-padding-16 w3-center" id="food">
-                <div class="w3-quarter">
-                  <img src="./images/m1.jpg" alt="Classic Margherita Pizza" style="width:30% ">
-                  <h3>Margherita Pizza</h3>
-                  <p>Ingredients:</p>
-                  <p>Chesse and tomato sause</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- <link rel="stylesheet" href="css/cards.css"> -->
+  <link rel="stylesheet" href="css/card1.css">
+  <script src="./js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+
+
+<!-- <div id="make-3D-space">
+    <div id="product-card">
+        <div id="product-front">
+        	<div class="shadow"></div>
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/t-shirt.png" alt="" />
+            <div class="image_overlay"></div>
+            <div id="view_details">View details</div>
+            <div class="stats">        	
+                <div class="stats-container">
+                    <span class="product_price">$39</span>
+                    <span class="product_name">Adidas Originals</span>    
+                    <p>Men's running shirt</p>                                            
+                    
+                    <div class="product-options">
+                    <strong>SIZES</strong>
+                    <span>XS, S, M, L, XL, XXL</span>
+                    <strong>COLORS</strong>
+                    <div class="colors">
+                        <div class="c-blue"><span></span></div>
+                        <div class="c-red"><span></span></div>
+                        <div class="c-white"><span></span></div>
+                        <div class="c-green"><span></span></div>
+                    </div>
+                </div>                       
+                </div>                         
+            </div>
+        </div>
+        <div id="product-back">
+	        <div class="shadow"></div>
+            <div id="carousel">
+                <ul>
+                    <li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/t-shirt-large.png" alt="" /></li>
+                    <li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/t-shirt-large2.png" alt="" /></li>
+                    <li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/t-shirt-large3.png" alt="" /></li>
+                </ul>
+                <div class="arrows-perspective">
+                    <div class="carouselPrev">
+                        <div class="y"></div>
+	                    <div class="x"></div>
+                    </div>
+                    <div class="carouselNext">
+                        <div class="y"></div>
+	                    <div class="x"></div>
+                    </div>
                 </div>
-                <div class="w3-quarter">
-                  <img src="./images/m2.jpg" alt="Paneer Pizza" style="width:30% ">
-                  <h3>Paneer Pizza</h3>
-                  <p>Ingredients:</p>
-                  <p>Tomato,Paneer,Capsicim,Onion,Cheese</p>
-                </div>
-                <div class="w3-quarter">
-                  <img src="./images/m3.jpg" alt="Spicy Paneer Pizza" style="width:30% ">
-                  <h3>Spicy Paneer Pizza</h3>
-                  <p>Ingredients:</p>
-                  <p>Tomato,Paneer,Red Chillies,Cheese</p>
-                  <p>What else?</p>
-                </div>
-                <div class="w3-quarter">
-                  <img src="./images/m4.jpg" alt="Veggie Feast" style="width:30% ">
-                  <h3>Veggie Feast</h3>
-                    <p>Ingredients:</p>
-                    <p>Red Capsicum,Onion,Black Olives,Basil leaves,Mushroom,Cheese</p>
-                </div>
-              </div>
-              
-              <!-- Second Photo Grid-->
-              <div class="w3-row-padding w3-padding-16 w3-center">
-                <div class="w3-quarter">
-                  <img src="./images/m5.jpg" alt="Farm House Pizza" style="width:30% ">
-                  <h3></h3>Farm House Pizza</h3>
-                  <p>Ingredients:</p>
-                  <p>Tomato,Capsicum,Onion,Mushroom,Cheese</p>
-                </div>
-                <div class="w3-quarter">
-                  <img src="./images/m6.jpg" alt="Salmon" style="width:30% ">
-                  <h3>Salmon For Your Skin</h3>
-                  <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-                </div>
-                <div class="w3-quarter">
-                  <img src="./images/m7.jpg" alt="Sandwich" style="width:30% ">
-                  <h3>The Perfect Sandwich, A Real Classic</h3>
-                  <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-                </div>
-                <div class="w3-quarter">
-                  <img src="./images/m8.jpg" alt="Croissant" style="width:30% ">
-                  <h3>Le French</h3>
-                  <p>Lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-                </div>
-              </div>
-              <!-- Third Photo Grid
-              <div class="w3-row-padding w3-padding-16 w3-center" id="food">
-                <div class="w3-quarter">
-                  <img src="./images/m10.jpg" alt="Sandwich" style="width:100% ">
-                  <h3>Masala Pasta</h3>
-                  <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-                </div>
-                <div class="w3-quarter">
-                  <img src="./images/m11.jpg" alt="Steak" style="width:100%">
-                  <h3>Tomato Sause Pasta</h3>
-                  <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-                </div>
-                <div class="w3-quarter">
-                  <img src="./images/m10.jpg" alt="Cherries" style="width:100%">
-                  <h3>Cherries, interrupted</h3>
-                  <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-                  <p>What else?</p>
-                </div>
-                <div class="w3-quarter">
-                  <img src="./images/m10.jpg" alt="Pasta and Wine" style="width:100%">
-                  <h3>Once Again, Robust Wine and Vegetable Pasta</h3>
-                  <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-                </div>
-              </div>
-            -->
-              
-            
-              <!-- Pagination -->
-              <div class="w3-center w3-padding-32">
-                <div class="w3-bar">
-                  <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
-                  <a href="#" class="w3-bar-item w3-black w3-button">1</a>
-                  <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
-                  <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
-                  <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
-                  <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
-                </div>
-              </div>
-          </div>
-    </body>
+            </div>
+            <div id="flip-back">
+            	<div id="cy"></div>
+                <div id="cx"></div>
+            </div>
+        </div>	  
+    </div>	
+</div>	 -->
+
+<div class="card">
+  <img src="./images/pizza1.jpg" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4 id="title"><b>John Doe</b></h4>
+    <p id="desc">Architect & Engineer</p>
+    <p id="price">20Rs</p>
+    <button class="button">Order</button>
+  </div>
+</div>
+
+  <!-- <script src="./js/Cards.js"></script> -->
+</body>
 </html>

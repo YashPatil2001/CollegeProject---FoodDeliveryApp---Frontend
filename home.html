@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Foodzap Website</title>
     <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/cards.css"> -->
+    <link rel="stylesheet" href="css/card1.css">
+    <script src="./js/jquery-3.6.0.min.js"></script>
      <!--<link rel="stylesheet" media="screen and (max-width: 1170px)" href="css/phone.css">-->
     <!-- <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet"> -->
   <!--Menu Syle-->
@@ -23,10 +26,11 @@
         </div>
         <ul>
             <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="#menu">Menu</a></li>
             <li class="item"><a href="#services-container">Services</a></li>
             
             <li class="item"><a href="#contact">Contact Us</a></li>
-            <li class="item"><a href="#contact">Contact Us</a></li>
+            
             
         </ul>
         <!-- <ul>    <align="left">
@@ -35,13 +39,29 @@
             </align>
         </ul> -->
         <ul class="loginsignup">
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="./login.html">Log In</a>
-            </li>
+            </li> -->
             <li class="nav-item">
               <a class="nav-link" href="./signup.html">Sign Up</a>
             </li>
         </ul>
+
+
+        <ul class="profile">
+          <li class="nav-item-right">
+            <a class="nav-link active" aria-current="page" href="./profile.html">Profile</a>
+          </li>   
+          <li class="nav-item-right" id="cart" >
+            <a class="nav-link active" aria-current="page" href="./cart.html">Cart</a>
+          </li>     
+      </ul>
+
+     
+            
+    </ul>
+
+
     </nav>
 
     <section id="home">
@@ -53,7 +73,13 @@
     
 
     </align>
-        <button class="btn" href="#menu">Menu</button>
+        <button id="menu" class="btn" href="#menu">
+          Menu
+        </button>
+
+        <div>
+          
+        </div>
     </section>
 
     <section id="services-container">
@@ -102,204 +128,137 @@
       </div> --->
     <section id="menu">
         <h1 class="h-primary center">Menu</h1>
-        <div class="cards">
-
-          <article class="card">
-            <header>
-                <h2>Classic Margherita Pizza</h2>
-            </header>
-            <img src="./images/m1.jpg" alt="Classic Margherita Pizza">
-            <div class="content">
-              <p>Ingredients:</p>
-              <p>Chesse and tomato sause</p>
-              <p>Rate: </p>
-            </div>
-            <footer>Add to cart</footer>
-        </article>
-
-        <article class="card">
-          <header>
-              <h2>Paneer Pizza</h2>
-          </header>
-          <img src="./images/m2.jpg" alt="Paneer Pizza">
-          <div class="content">
-            <p>Ingredients:</p>
-            <p>Tomato,Paneer,Capsicim,Onion,Cheese</p>
-            <p>Rate: </p>
-          </div>
-          <footer>Add to cart</footer>
-      </article>
-
-      <article class="card">
-        <header>
-            <h2>Spicy Paneer Pizza</h2>
-        </header>
-        <img src="./images/m3.jpg" alt="Spicy Paneer Pizza">
-        <div class="content">
-          <p>Ingredients:</p>
-          <p>Tomato,Paneer,Red Chillies,Cheese</p>
-          <p>Rate: </p>
+    
+     
+     <div class="product-cards"  id="accordion">
+      
+      <!-- <div class="card-list-box"> -->
+        <div  class="card">
+         <div class="img-conntainer">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQemRdqv0dvKtgmcKMbixSY32CsUXrrXKQYRw&usqp=CAU" alt="Avatar" style="width:100%">
+         </div> 
+        <div class="container">
+          <h4 id="title"><b>John Doe</b></h4>
+          <p id="desc">Architect & Engineer</p>
+          <p id="price">20Rs</p>
+          <button class="button">Order</button>
         </div>
-        <footer>Add to cart</footer>
-    </article>
-
-    <article class="card">
-      <header>
-          <h2>Veggie Feast</h2>
-      </header>
-      <img src="./images/m4.jpg" alt="Veggie Feast">
-      <div class="content">
-        <p>Ingredients:</p>
-        <p>Red Capsicum,Onion,Black Olives,Basil leaves,Mushroom,Cheese</p>
-        <p>Rate: </p>
       </div>
-      <footer>Add to cart</footer>
-  </article>
 
-  <article class="card">
-    <header>
-        <h2>Farm House Pizza</h2>
-    </header>
-    <img src="./images/m5.jpg" alt="Farm House Pizza">
-    <div class="content">
-      <p>Ingredients:</p>
-                  <p>Tomato,Capsicum,Onion,Mushroom,Cheese</p>
-      <p>Rate: </p>
-    </div>
-    <footer>Add to cart</footer>
-</article>
+      <div  class="card">
+           <div class="img-conntainer">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQemRdqv0dvKtgmcKMbixSY32CsUXrrXKQYRw&usqp=CAU" alt="Avatar" style="width:100%">
+           </div> 
+          <div class="container">
+            <h4 id="title"><b>John Doe</b></h4>
+            <p id="desc">Architect & Engineer</p>
+            <p id="price">20Rs</p>
+            <button class="button">Order</button>
+          </div>
+        </div>
 
-<article class="card">
-  <header>
-      <h2>Pepperoni Mushroom Pizza</h2>
-  </header>
-  <img src="./images/m6.jpg" alt="Pepperoni Mushroom Pizza">
-  <div class="content">
-    <p>Ingredients:</p>
-    <p>Tomato,Mushroom, Chesse and Pepper</p>
-    <p>Rate: </p>
-  </div>
-  <footer>Add to cart</footer>
-</article>
-
-<article class="card">
-  <header>
-      <h2>Peri-peri Paneer Pizza</h2>
-  </header>
-  <img src="./images/m7.jpg" alt="Peri-peri Paneer Pizza">
-  <div class="content">
-    <p>Ingredients:</p>
-    <p>Peri-peri Masala,Paneer,Red Chillies,Cheese & tomato sause</p>
-    <p>Rate: </p>
-  </div>
-  <footer>Add to cart</footer>
-</article>
-
-<article class="card">
-  <header>
-      <h2>Special Olive and Corn Pizza</h2>
-  </header>
-  <img src="./images/m8.jpg" alt="Special Olive and Corn Pizza">
-  <div class="content">
-    <p>Ingredients:</p>
-    <p>Olive,Corn,Tomato,Onion,Mushroom,Cheese and sweet & spicy sause</p>
-    <p>Rate: </p>
-  </div>
-  <footer>Add to cart</footer>
-</article>
-
-<article class="card">
-  <header>
-      <h2>Garlic Bread</h2>
-  </header>
-  <img src="./images/m9.jpg" alt="Garlic Bread">
-  <div class="content">
-    <p>Ingredients:</p>
-    <p>Chesse and tomato sause</p>
-    <p>Rate: </p>
-  </div>
-  <footer>Add to cart</footer>
-</article>
-
-<article class="card">
-  <header>
-      <h2>White Sause Pasta</h2>
-  </header>
-  <img src="./images/m10.jpg" alt="White Sause Pasta">
-  <div class="content">
-    <p>Ingredients:</p>
-    <p>Chessy Pasta</p>
-    <p>Rate: </p>
-  </div>
-  <footer>Add to cart</footer>
-</article>
+          <div class="card">
+             <div class="img-conntainer">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQemRdqv0dvKtgmcKMbixSY32CsUXrrXKQYRw&usqp=CAU" alt="Avatar" style="width:100%">
+             </div> 
+            <div class="container">
+              <h4 id="title"><b>John Doe</b></h4>
+              <p id="desc">Architect & Engineer</p>
+              <p id="price">20Rs</p>
+              <button class="button">Order</button>
+            </div>
+          </div>
 
 
-<article class="card">
-  <header>
-      <h2>Peri-peri Masala Pasta</h2>
-  </header>
-  <img src="./images/m11.jpg" alt="Peri-periMasala Pasta">
-  <div class="content">
-    <p>Ingredients:</p>
-    <p>Tomato Sause and Peri-peri Masala</p>
-    <p>Rate: </p>
-  </div>
-  <footer>Add to cart</footer>
-</article>
-             
-<article class="card">
-  <header>
-      <h2>Coffee</h2>
-  </header>
-  <img src="./images/m12.jpg" alt="Coffee">
-  <div class="content">
-    <p>Ingredients:</p>
-    <p>Coffee,milk cream,sugar(if required)</p>
-    <p>Rate: </p>
-  </div>
-  <footer>Add to cart</footer>
-</article>
+          <div  class="card">
+               <div class="img-conntainer">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQemRdqv0dvKtgmcKMbixSY32CsUXrrXKQYRw&usqp=CAU" alt="Avatar" style="width:100%">
+               </div> 
+              <div class="container">
+                <h4 id="title"><b>John Doe</b></h4>
+                <p id="desc">Architect & Engineer</p>
+                <p id="price">20Rs</p>
+                <button class="button">Order</button>
+              </div>
+            </div>
+
+
+            <div  class="card">
+                 <div class="img-conntainer">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQemRdqv0dvKtgmcKMbixSY32CsUXrrXKQYRw&usqp=CAU" alt="Avatar" style="width:100%">
+                 </div> 
+                <div class="container">
+                  <h4 id="title"><b>John Doe</b></h4>
+                  <p id="desc">Architect & Engineer</p>
+                  <p id="price">20Rs</p>
+                  <button class="button">Order</button>
+                </div>
            
-<article class="card">
-  <header>
-      <h2>Brownie</h2>
-  </header>
-  <img src="./images/m13.png" alt="Brownie">
-  <div class="content">
-    <p>Ingredients:</p>
-    <p>Brownie with vanilla ice-cream and chocolate syrup</p>
-    <p>Rate: </p>
-  </div>
-  <footer>Add to cart</footer>
-</article>
+              </div>
+      
 
-<article class="card">
-  <header>
-      <h2>Desert</h2>
-  </header>
-  <img src="./images/m18.jpg" alt="Desert">
-  <div class="content">
-    <p>Ingredients:</p>
-    <p>Red Velvet with whipped cream</p>
-    <p>Rate: </p>
-  </div>
-  <footer>Add to cart</footer>
-</article>
 
-<article class="card">
-  <header>
-      <h2>Coke</h2>
-  </header>
-  <img src="./images/m15.jpg" alt="Coke">
-  <div class="content">
-    <p>Description :</p>
-    <p>Coke and other beverages</p>
-    <p>Rate: </p>
-  </div>
-  <footer>Add to cart</footer>
-</article>
-     </div>
+      <!-- <div id="make-3D-space">
+        <div id="product-card">
+            <div id="product-front">
+              <div class="shadow"></div>
+                <img src="./images/pizza1.jpg" alt="" />
+                <div class="image_overlay"></div>
+                <div id="view_details">View details</div>
+                <div class="stats">        	
+                    <div class="stats-container">
+                        <span class="product_price">$39</span>
+                        <span class="product_name">Adidas Originals</span>    
+                        <p>Men's running shirt</p>                                            
+                        
+                        <div class="product-options">
+                        <strong>SIZES</strong>
+                        <span>XS, S, M, L, XL, XXL</span>
+                        <strong>COLORS</strong>
+                        <div class="colors">
+                            <div class="c-blue"><span></span></div>
+                            <div class="c-red"><span></span></div>
+                            <div class="c-white"><span></span></div>
+                            <div class="c-green"><span></span></div>
+                        </div>
+                    </div>                       
+                    </div>                         
+                </div>
+            </div>
+            <div id="product-back">
+              <div class="shadow"></div>
+                <div id="carousel">
+                    <ul>
+                        <li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/t-shirt-large.png" alt="" /></li>
+                        <li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/t-shirt-large2.png" alt="" /></li>
+                        <li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/t-shirt-large3.png" alt="" /></li>
+                    </ul>
+                    <div class="arrows-perspective">
+                        <div class="carouselPrev">
+                            <div class="y"></div>
+                          <div class="x"></div>
+                        </div>
+                        <div class="carouselNext">
+                            <div class="y"></div>
+                          <div class="x"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="flip-back">
+                  <div id="cy"></div>
+                    <div id="cx"></div>
+                </div>
+            </div>	  
+        </div>	
+    </div> -->
+
+
+
+    </div> 
+
+    
+     
+  
     </section>        
                   
           
@@ -329,6 +288,8 @@
             Copyright &copy; www.Foodzap.com. All rights reserved!
         </div>
     </footer>
+    <script src="./js/Home.js"></script>
+    <script src="./js/Cards.js"></script>
 </body>
 
 </html>
