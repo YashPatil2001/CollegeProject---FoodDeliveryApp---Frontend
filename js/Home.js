@@ -45,14 +45,18 @@ $(document).ready(() => {
 setData = (data) => {
     const container = document.getElementById(`accordion`);
 
+    
+    let content="";
     for (let i = 0; i < data.length; i++) {
           const card = document.createElement("div");
           card.classList = "card-body";
-          let product = data[i]
+          let product = data[i];
           console.log(`product : ${product}`);
-          const content = `   
+          content += `   
                  <div class="card">
+                    <div class="img-conntainer">
                     <img src="${product.imageUrl}" alt="Avatar" style="width:100%" id="img-${i}">
+                    </div>
                     <div class="container">
                     <h4 class="title" id="title-${i}"><b>${product.title}</b></h4>
                     <br>
@@ -64,9 +68,9 @@ setData = (data) => {
                  </div>
                  `;
 
-   container.innerHTML += content;
     }
     
+   container.innerHTML = content;
     setListeners(data);
 }
 
