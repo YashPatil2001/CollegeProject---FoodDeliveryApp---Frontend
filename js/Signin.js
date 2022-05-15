@@ -74,7 +74,7 @@ $("#btn-signin").click(() => {
       // alert('login successfully')
       localStorage.setItem("is_log_in", true);
       localStorage.setItem("user_id", data);
-      window.open("http://127.0.0.1:5502/home.html", "_self");
+      window.open("http://127.0.0.1:5502/html/home.html", "_self");
     },
     error: function (request, status, error) {
       $(".loading-icon").addClass("hide");
@@ -94,5 +94,5 @@ function onSuccess() {
   console.log("success");
   // alert('login successfully')
   localStorage.setItem("is_log_in", true);
-  window.open("http://127.0.0.1:5502/home.html", "_self");
+  window.open('#profile.html',"_self");
 }
