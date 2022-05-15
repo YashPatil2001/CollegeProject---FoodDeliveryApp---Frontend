@@ -1,11 +1,18 @@
 const productListUrl = 'http://localhost:8080/product/allProducts'
+// import { makeToast } from './Toast.js'
+
 
 $(document).ready(() => {
-  $(`.profile`).hide();
-  // if(localStorage.getItem('is_log_in')){
-  //     $('.profile').show()
-  //     $('.loginsignup').hide()
-  // }
+
+  if(localStorage.getItem('is_log_in')){
+      $('.profile').show()
+      $('.cart').show();
+      $('.loginsignup').hide()
+  }else{
+    $('.profile').hide()
+    $('.cart').hide();
+    $('.loginsignup').show()
+  }
   $.ajax({
     type: "GET",
     url: productListUrl,
@@ -53,7 +60,7 @@ setData = (data) => {
           let product = data[i];
           console.log(`product : ${product}`);
           content += `   
-                 <div class="card">
+                 <div class="card" id="card-${i}">
                     <div class="img-conntainer">
                     <img src="${product.imageUrl}" alt="Avatar" style="width:100%" id="img-${i}">
                     </div>
@@ -74,11 +81,29 @@ setData = (data) => {
     setListeners(data);
 }
 
-setListeners = (data) => {
-   for (let i = 0; i < data.length; i++) {
+setListeners = (products) => {
+   for (let i = 0; i < products.length; i++) {
          $(`#btn-${i}`).click(() => {
-              alert('title : ' + data[i].title);
+          // $(`#card-${i}`).remove();
+              // alert('title : ' + data[i].title);
+              cart = JSON.parse(localStorage.getItem("cart") || "[]");
+              if(cart.some( product => product.productId === products[i].productId)){
+                makeToast(`"${products[i].title}" already added to cart`,error=true);
+              }else{
+                addtoCart(products[i]);
+              }
+            
          })
    }
+ 
+}
+
+addtoCart = (product) => {
+  cart = JSON.parse(localStorage.getItem("cart") || "[]");
+  cart.push(product);
+  product.isAdded = true;
+  localStorage.setItem("cart",JSON.stringify(cart));
+  makeToast(`"${product.title}" added to cart`);
+           
 }
 

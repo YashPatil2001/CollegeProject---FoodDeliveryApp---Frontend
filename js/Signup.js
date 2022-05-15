@@ -153,7 +153,8 @@ email.addEventListener('input', (e) => {
           $(".btn-txt").text("Signup");
              alert("Email Validation Successfull")
              localStorage.setItem("is_log_in",true);
-             window.open('http://127.0.0.1:5502/home.html','_self');
+             localStorage.setItem("user_id", data);
+             window.open('http://127.0.0.1:5502/html/home.html','_self');
          })
      }else{
         $.ajax({
