@@ -3,6 +3,7 @@ $(document).ready(() => {
   total = sessionStorage.getItem("total-price");
   console.log(cart);
   invoiceInit(cart,total);
+
 });
 
 invoiceInit = (cart, totalPrice) => {
@@ -35,6 +36,7 @@ setCurrentDate = () => {
   var yyyy = today.getFullYear();
 
   today = mm + "/" + dd + "/" + yyyy;
+  console.log("date " + today);
   $('#date').text(`Created at : ${today}`)
 };
 
@@ -72,19 +74,15 @@ sendInvoicetoBackEnd = (html,email) => {
         }),
         dataType: "json",
         success: (data) => {    
-          console.log("success");
-        //   console.log("data : " + JSON.stringify(data));
-        //   console.log("order Id : " + data.orderIdByPaymentGateway);
-        //   $('#title').text('Moving to checkout...')
-        //   setupPayment(data.orderIdByPaymentGateway,data)
         makeToast('Check your registered email to get invoice copy')
-        localStorage.setItem("cart",JSON.stringify("[]"))
-        console.log('localstaorage : ' + localstorage.getItem("cart"));
+        localStorage.removeItem('cart')
         sessionStorage.setItem('total-price',null)
+        console.log("after success");
        
         },
         error: function (request, status, error) {
-          console.log(JSON.stringify(status));    
+          // console.log(JSON.stringify(status));    
+          console.log('after fail');
         },
       });
 }

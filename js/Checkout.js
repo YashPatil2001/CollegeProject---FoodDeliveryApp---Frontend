@@ -71,12 +71,13 @@ setupPayment = (orderId,order) => {
             // alert(response.razorpay_signature)
             $('#title').text('Payment done sucessfully,Have a nice day')
             $('.loader').hide()
-            window.open('http://127.0.0.1:5502/html/invoice.html','_self');
+            window.open('http://127.0.0.1:5502/html/invoice.html');
+            history.back()
         },
         "prefill": {
-            "name": "Yash Patil",
-            "email": "yashpatilc2001@gmail.com.com",
-            "contact": "7517096043"
+            "name": "Foodzapp Inc",
+            "email": "pizza@foodzapp.com",
+            "contact": "9370728305"
         },
         "notes": {
             "address": "RYK College of Science"

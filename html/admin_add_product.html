@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="../css/admin_login.css">
+    <link rel="stylesheet" href="../css/toast.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <style>
+        .content {
+          max-width: 500px;
+          margin: auto;
+        }
+        </style>
+</head>
+<body>
+      <!-- The actual snackbar -->
+<div id="snackbar">Some text some message..</div>
+<h1 style="text-align: center;">Add new Product</h1>
+
+    <form  method="post" class="content"> 
+        <div class="container">
+          <label for="uname"><b>Product title</b></label>
+          <input id="p-title" type="text" placeholder="Enter title" name="uname" required>
+
+          <label for="uname"><b>Product Image url</b></label>
+          <input id="p-url" type="text" placeholder="Enter valid product image url" name="uname" required>
+
+          <label for="uname"><b>Product Price</b></label>
+          <input id="p-pr" type="text" placeholder="Enter price" name="uname" required>
+      
+          <label for="psw"><b>Prodcut Description</b></label>
+          <input id="p-desc" type="text" placeholder="Enter Description" name="psw" required>
+      
+          <button id="submit"type="button">Add Product</button>
+         
+        </div>
+      
+     
+      </form>
+      <script src="../js/Toast.js"></script>
+      <script src="../js/AdminAddProduct.js"></script>
+</body>
+</html>

@@ -86,12 +86,18 @@ setListeners = (products) => {
          $(`#btn-${i}`).click(() => {
           // $(`#card-${i}`).remove();
               // alert('title : ' + data[i].title);
-              cart = JSON.parse(localStorage.getItem("cart") || "[]");
-              if(cart.some( product => product.productId === products[i].productId)){
-                makeToast(`"${products[i].title}" already added to cart`,error=true);
+
+              if(localStorage.getItem('is_log_in')){
+                cart = JSON.parse(localStorage.getItem("cart") || "[]");
+                if(cart.some( product => product.productId === products[i].productId)){
+                  makeToast(`"${products[i].title}" already added to cart`,error=true);
+                }else{
+                  addtoCart(products[i]);
+                }
               }else{
-                addtoCart(products[i]);
+                window.open('http://127.0.0.1:5502/html/signup.html');
               }
+             
             
          })
    }

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="../css/admin_login.css">
+    <link rel="stylesheet" href="../css/toast.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <style>
+        .content {
+          max-width: 500px;
+          margin: auto;
+        }
+        </style>
+</head>
+<body>
+      <!-- The actual snackbar -->
+<div id="snackbar">Some text some message..</div>
+<h1 style="text-align: center;">Create new User</h1>
+
+    <form  method="post" class="content"> 
+        <div class="container">
+          <label for="uname"><b>Email</b></label>
+          <input id="u-email" type="text" placeholder="Enter email" name="uname" required>
+
+          <label for="uname"><b>FirstName</b></label>
+          <input id="u-firstname" type="text" placeholder="Enter firstname" name="uname" required>
+
+          <label for="uname"><b>LastName</b></label>
+          <input id="u-lastname" type="text" placeholder="Enter lastname" name="uname" required>
+      
+          <label for="psw"><b>Password</b></label>
+          <input id="u-psw" type="password" placeholder="Enter password" name="psw" required>
+      
+          <button id="submit"type="button">Create User</button>
+         
+        </div>
+      
+     
+      </form>
+      <script src="../js/Toast.js"></script>
+      <script src="../js/AdminCreateUser.js"></script>
+</body>
+</html>
