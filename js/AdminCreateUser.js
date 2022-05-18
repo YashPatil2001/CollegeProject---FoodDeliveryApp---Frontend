@@ -1,3 +1,4 @@
+const createUserUrl = 'http://35.87.139.152:8081/admin/user'
 $('#submit').click(() => {
     let email = $('#u-email').val()
     let firstName = $('#u-firstname').val()
@@ -27,7 +28,7 @@ $('#submit').click(() => {
     
     $.ajax({
         type: "POST",
-        url: 'http://localhost:8080/admin/user',
+        url: createUserUrl,
         contentType: "application/json",
         data: JSON.stringify({
             email : email,

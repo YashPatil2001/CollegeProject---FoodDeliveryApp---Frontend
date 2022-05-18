@@ -1,3 +1,4 @@
+const addProductUrl = 'http://35.87.139.152:8081/product/add'
 $('#submit').click(() => {
     let title = $('#p-title').val()
     let price = $("#p-pr").val()
@@ -27,7 +28,7 @@ $('#submit').click(() => {
     
     $.ajax({
         type: "POST",
-        url: 'http://localhost:8080/product/add',
+        url: addProductUrl,
         contentType: "application/json",
         data: JSON.stringify({
             title : title,

@@ -1,4 +1,5 @@
-const productListUrl = 'http://localhost:8080/product/allProducts'
+// const productListUrl = 'http://localhost:8080/product/allProducts'
+const productListUrl = 'http://35.87.139.152:8081/product/allProducts'
 // import { makeToast } from './Toast.js'
 
 

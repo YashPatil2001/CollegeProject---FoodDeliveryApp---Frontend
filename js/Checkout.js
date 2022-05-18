@@ -1,4 +1,5 @@
-const placeOrderUrl = 'http://localhost:8080/order/place'
+// const placeOrderUrl = 'http://localhost:8080/order/place'
+const placeOrderUrl = 'http://35.87.139.152:8081/order/place'
 const RAZO_KEY = 'rzp_test_xNBNDsvlR1Zr9I'
 const RAZO_RECRET = 'ReQMGxpo1bPzEKXUfL45K1Sf'
 

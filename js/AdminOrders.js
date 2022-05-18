@@ -1,3 +1,4 @@
+const getAllOrdersUrl = 'http://35.87.139.152:8081/order'
 $(document).ready(() => {
     getAllOrders();
   
@@ -9,7 +10,7 @@ $(document).ready(() => {
   getAllOrders = () => {
     $.ajax({
       type: "GET",
-      url: "http://localhost:8080/order",
+      url: getAllOrdersUrl,
       contentType: "application/json",
       dataType: "json",
       success: (data) => {
@@ -77,7 +78,7 @@ $(document).ready(() => {
   deleteProduct = (position, order) => {
     $.ajax({
       type: "GET",
-      url: "http://localhost:8080/order/" + order.orderId,
+      url: getAllOrdersUrl + order.orderId,
       contentType: "application/json",
       dataType: "json",
       success: (data) => {

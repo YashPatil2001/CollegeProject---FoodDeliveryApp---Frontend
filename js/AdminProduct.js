@@ -1,3 +1,4 @@
+const getAllProductsUrl = 'http://35.87.139.152:8081/product/allProducts'
 $(document).ready(() => {
   getAllUsers();
 
@@ -9,7 +10,7 @@ $(document).ready(() => {
 getAllUsers = () => {
   $.ajax({
     type: "GET",
-    url: "http://localhost:8080/product/allProducts",
+    url: getAllProductsUrl,
     contentType: "application/json",
     dataType: "json",
     success: (data) => {

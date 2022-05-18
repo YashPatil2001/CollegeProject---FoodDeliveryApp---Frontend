@@ -1,3 +1,4 @@
+const userInfoUrl = 'http://35.87.139.152:8081/'
 $(document).ready(() => {
   cart = JSON.parse(localStorage.getItem("cart"));
   total = sessionStorage.getItem("total-price");
@@ -44,7 +45,8 @@ setUserInfo = () => {
     
     $.ajax({
         type: "GET",
-        url: `http://localhost:8080/auth/user/${localStorage.getItem('user_id')}`,
+        // url: `http://localhost:8080/auth/user/${localStorage.getItem('user_id')}`,
+        url: `http://35.87.139.152:8081/auth/user/${localStorage.getItem('user_id')}`,
         contentType: "application/json",
         dataType: "json",
         success: (data) => {    
@@ -66,7 +68,8 @@ sendInvoicetoBackEnd = (html,email) => {
    
     $.ajax({
         type: "POST",
-        url: 'http://localhost:8080/order/invoice',
+        // url: 'http://localhost:8080/order/invoice',
+        url: 'http://35.87.139.152:8081/order/invoice',
         contentType: "application/json",
         data: JSON.stringify({
             email: email,

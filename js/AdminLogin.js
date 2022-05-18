@@ -1,3 +1,4 @@
+const adminLoginUrl = 'http://35.87.139.152:8081/admin/'
 $('#submit').click(() => {
     let username = $('#admin-name').val()
     let password = $('#admin-psw').val()
@@ -17,7 +18,7 @@ $('#submit').click(() => {
     
     $.ajax({
         type: "POST",
-        url: 'http://localhost:8080/admin/',
+        url: adminLoginUrl,
         contentType: "application/json",
         data: JSON.stringify({
             username : username,

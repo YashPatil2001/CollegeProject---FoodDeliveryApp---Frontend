@@ -13,8 +13,8 @@ const cPasswordErr = document.getElementById("c-password-err");
 submitButton = document.getElementById("btn-signup")
 const emailPattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/; 
 
-const signupUrl = 'http://localhost:8080/auth/signup';
-const validationUrl = 'http://localhost:8080/auth/validation';
+const signupUrl = 'http://35.87.139.152:8081/auth/signup';
+const validationUrl = 'http://35.87.139.152:8081/auth/validation';
 
 var success = false;
 

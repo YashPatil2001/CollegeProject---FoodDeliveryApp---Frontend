@@ -1,3 +1,5 @@
+const getStatsUrl = 'http://35.87.139.152:8081/admin/stats'
+const getOrdersUrl = 'http://35.87.139.152:8081/order'
 $(document).ready(() => {
     getBasicStats()
   setupOrders()
@@ -15,7 +17,7 @@ setupNavigation = () => {
 getBasicStats = () => {
     $.ajax({
         type: "GET",
-        url: 'http://localhost:8080/admin/stats',
+        url: getStatsUrl,
         contentType: "application/json",
         dataType: "json",
         success: (data) => {    
@@ -49,7 +51,7 @@ setupOrders = () => {
 
     $.ajax({
         type: "GET",
-        url: 'http://localhost:8080/order',
+        url: getOrdersUrl,
         contentType: "application/json",
         dataType: "json",
         success: (data) => {    

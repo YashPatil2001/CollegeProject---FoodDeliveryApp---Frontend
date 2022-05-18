@@ -1,3 +1,5 @@
+const deleteUserUrl = 'http://35.87.139.152:8081/admin/user/'
+const getAllUsersUrl = 'http://35.87.139.152:8081/admin/users'
 // <div id="user-container">
 // <tr>
 //     <td>Alfreds Futterkiste</td>
@@ -18,7 +20,7 @@ $(document).ready(() => {
 getAllUsers = ( ) => {
     $.ajax({
         type: "GET",
-        url: 'http://localhost:8080/admin/users',
+        url: getAllUsersUrl,
         contentType: "application/json",
         dataType: "json",
         success: (data) => {    
@@ -84,7 +86,7 @@ deleteUser = (position,user) => {
 
     $.ajax({
         type: "GET",
-        url: 'http://localhost:8080/admin/user/' + user.profileId,
+        url: deleteUserUrl + user.profileId,
         contentType: "application/json",
         dataType: "json",
         success: (data) => {    

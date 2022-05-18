@@ -6,7 +6,8 @@ const passwordErr = document.getElementById("password-err");
 const commonErr = document.getElementById("common-err");
 
 const emailPattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
-const siginUrl = "http://localhost:8080/auth/login";
+// const siginUrl = "http://localhost:8080/auth/login";
+const siginUrl = "http://35.87.139.152:8081/auth/login";
 
 email.addEventListener("input", (e) => {
   const value = e.target.value;
